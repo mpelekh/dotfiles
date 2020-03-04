@@ -1,4 +1,4 @@
-# Denys Dovhan’s dotfiles
+# Dotfiles
 
 <p align="center">
   <img alt="Spaceship with Hyper and One Dark" src="https://user-images.githubusercontent.com/10276208/36086434-5de52ace-0ff2-11e8-8299-c67f9ab4e9bd.gif" width="980px">
@@ -15,10 +15,10 @@ There are tons of useful things in here:
 - [🌺 zplug](https://zplug.sh) for dependency management.
 - Useful [aliases](./lib/aliases.zsh).
 - Git config, global `.gitignore` file and aliases.
-- VSCode settings [syncronization](https://github.com/denysdovhan/dotfiles/tree/master/setup/atom.sh).
+- VSCode settings [syncronization](https://github.com/mpelekh/dotfiles/tree/master/setup/atom.sh).
 - Dotfiles synchronization (`sync.py`) with backup.
 - Restoring old dotfiles (`restore.py`) from backup.
-- A lot of [useful bins](https://github.com/denysdovhan/dotfiles/tree/master/bin).
+- A lot of [useful bins](https://github.com/mpelekh/dotfiles/tree/master/bin).
 - `update` script for updating dotfiles, npm, brew, gems, etc.
 
 Missing feature? 🍴 Fork this repo and make it better!
@@ -30,13 +30,13 @@ Dotfiles are installed by running one of the following commands in your terminal
 **via `curl`**
 
 ```sh
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/denysdovhan/dotfiles/master/installer.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/mpelekh/dotfiles/master/installer.sh)"
 ```
 
 **via `wget`**
 
 ```sh
-bash -c "$(wget https://raw.githubusercontent.com/denysdovhan/dotfiles/master/installer.sh -O -)"
+bash -c "$(wget https://raw.githubusercontent.com/mpelekh/dotfiles/master/installer.sh -O -)"
 ```
 
 Tell Git who you are using these commands:
