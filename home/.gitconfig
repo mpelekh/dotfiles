@@ -36,6 +36,9 @@
   # Fully commits log with statistic
   ll = log --stat --abbrev-commit
 
+  # Show custom graph 
+  g = log --graph --pretty=custom
+
   # Ignore files: append file to .ginignore
   ignore = !([ ! -e .gitignore ] && touch .gitignore) | echo `\n$2` >> .gitignore
 
@@ -62,6 +65,14 @@
 
   # How many lines in repo
   stat = !git ls-files | xargs wc -l
+
+[pretty]
+  custom = "%C(magenta)%h%C(red)%d %C(yellow)%ar %C(green)%s %C(yellow)(%an)"
+  #                     |        |            |            |             | author name
+  #                     |        |            |            | message
+  #                     |        |            | date (relative)
+  #                     |        | decorations (branch, heads or tags)
+  #                     | hash (abbreviated)
 
 [push]
   default = current
@@ -90,7 +101,7 @@
 #   git config -f ~/.gitlocal user.name "Name Lastname"
 # Example .gitlocal:
 # [user]
-#   name = Denys Dovhan
-#   email = denysdovhan@gmail.com
+#   name = Mykola Pelekh
+#   email = nick.peleh@gmail.com
 [include]
   path = ~/.gitlocal
