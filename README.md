@@ -15,7 +15,6 @@ There are tons of useful things in here:
 - [🌺 zplug](https://zplug.sh) for dependency management.
 - Useful [aliases](./lib/aliases.zsh).
 - Git config, global `.gitignore` file and aliases.
-- VSCode settings [syncronization](https://github.com/mpelekh/dotfiles/tree/master/setup/atom.sh).
 - Dotfiles synchronization (`sync.py`) with backup.
 - Restoring old dotfiles (`restore.py`) from backup.
 - A lot of [useful bins](https://github.com/mpelekh/dotfiles/tree/master/bin).
@@ -109,7 +108,6 @@ Aliases are gonna make your work fast and enjoyable. See code in `$DOTFILES/lib/
 - Misc
   - **`update`** — get updates (Runs `$DOTFILES/scripts/update.zsh`).
   - **`dotfiles`** — jump quickly into dotfiles folder.
-  - **`alert`** — throw alert notify message. Add an `alert` alias for long running commands. Use like so: `sleep 10; alert`. (Works only when `notify-send` is available).
   - **`myip`** — my local IP address.
   - **`password`** — generate random password, copies it into clipboard and outputs it to terminal.
   - **`path`** — print $PATH in readable view.

@@ -45,7 +45,7 @@ export PAGER='less'
 # less options
 less_opts=(
   # Quit if entire file fits on first screen.
-  --quit-if-one-screen
+  -FX
   # Ignore case in searches that do not contain uppercase.
   --ignore-case
   # Allow ANSI colour escapes, but no other escapes.
@@ -73,9 +73,15 @@ fi
 
 # SSH
 export SSH_KEY_PATH="$HOME/.ssh/id_rsa"
+ssh-add -K $SSH_KEY_PATH &> /dev/null
 
 # GPG
 export GPG_TTY=$(tty)
+
+# Source local configuration
+if [[ -f "$HOME/.zshlocal" ]]; then
+  source "$HOME/.zshlocal"
+fi
 
 # ------------------------------------------------------------------------------
 # Dependencies
@@ -109,8 +115,8 @@ zplug "denysdovhan/gitio-zsh", as:command, use:"gitio.zsh", rename-to:"gitio"
 zplug "rauchg/wifi-password", as:command, use:"wifi-password.sh", rename-to:"wifi-password"
 
 # Spaceship ZSH
-if [[ -d "$HOME/Projects/Repos/spaceship-prompt" ]]; then
-  zplug "$HOME/Projects/Repos/spaceship-prompt", from:local, as:theme, use:"spaceship.zsh"
+if [[ -d "$HOME/Projects/Repos/spaceship/spaceship-prompt" ]]; then
+  zplug "$HOME/Projects/Repos/spaceship/spaceship-prompt", from:local, as:theme, use:"spaceship.zsh"
 else
   zplug "denysdovhan/spaceship-prompt", as:theme, use:"spaceship.zsh"
 fi
