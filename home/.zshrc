@@ -63,6 +63,8 @@ less_opts=(
   --quiet
   # Do not complain when we are on a dumb terminal.
   --dumb
+  # Disables sending the termcap initialization and deinitialization strings to the terminal. This is sometimes desirable if the deinitialization string does something unnecessary, like clearing the screen.
+  --no-init
 )
 export LESS="${less_opts[*]}"
 
