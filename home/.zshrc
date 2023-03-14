@@ -44,8 +44,8 @@ if [ -d ~/.npm-global ]; then
 fi
 
 # bun completions
-if [ -s "/Users/denysd/.bun/_bun" ]; then
-  source "/Users/denysd/.bun/_bun"
+if [ -s "/Users/mpelekh/.bun/_bun" ]; then
+  source "/Users/mpelekh/.bun/_bun"
 fi
 
 # Default pager
