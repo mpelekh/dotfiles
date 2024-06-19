@@ -160,3 +160,9 @@ export PATH=/Users/mpelekh/Projects/Playground/ardupilot/Tools/autotest:$PATH
 
 # This is autocompletion for ardupilot stuf
 source /Users/mpelekh/Projects/Playground/ardupilot/Tools/completion/completion.zsh
+
+# Shell aliases for kubectl
+alias kg="kubectl get"
+alias kgo="kubectl get -oyaml"
+alias kd="kubectl describe"
+alias klog="kubectl log"
