@@ -99,7 +99,7 @@ plugins=(
   nvm
   sudo
   extract
-  ssh-agent
+  # ssh-agent
   gpg-agent
   macos
   gh
@@ -107,6 +107,7 @@ plugins=(
   common-aliases
   command-not-found
   docker
+  kubectl
 )
 
 # Autoload node version when changing cwd
@@ -144,3 +145,18 @@ fi
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
+export PYENV_ROOT=$HOME/.pyenv
+export PATH=$PYENV_ROOT/bin:$PATH
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+export PATH=/opt/gcc-arm-none-eabi-10-2020-q4-major/bin:$PATH
+export PATH=/Users/mpelekh/Projects/Playground/ardupilot/Tools/autotest:$PATH
+
+# This is autocompletion for ardupilot stuf
+source /Users/mpelekh/Projects/Playground/ardupilot/Tools/completion/completion.zsh
